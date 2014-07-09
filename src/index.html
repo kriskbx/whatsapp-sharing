@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="whatsapp sharing">
+	<meta name="description" content="Create your own WhatsApp sharing button!">
+	<meta name="keywords" content="whatsapp, share, sharing, like, button, generator, gen">
+	<meta http-equiv="content-language" content="en">
+	<meta name="robots" content="index, follow">
+	<meta property="og:title" content="WhatsApp Sharing Button Generator">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://whatsapp-sharing.com">
+	<meta property="og:image" content="http://whatsapp-sharing.com/assets/img/share.jpg">
+	
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <title>WhatsApp Sharing Button Generator</title>
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+		<h1 class="logo"><img src="assets/img/logo_green.svg"><br />WhatsApp Sharing Button Generator</h1>
+		<p>&nbsp;</p>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="fb-like" data-href="http://whatsapp-sharing.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" style="bottom:8px;"></div>				
+			</div>
+			<div class="col-sm-4">				
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://whatsapp-sharing.com">Tweet</a>
+			</div>
+			<div class="col-sm-4">
+				<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="150"></div>
+			</div>
+			<div class="col-sm-4 visible-xs">
+				<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<p><a href="http://qz.com/179261/people-are-already-sharing-more-buzzfeed-stories-to-whatsapp-than-to-twitter/" target="_new">Buzzfeed says</a> iPhone users are clicking their new WhatsApp button more than Twitter's. This was enough for us to build a WhatsApp sharing button generator, so you can easily create your own.</p>
+		<p class="important">WhatsApp sharing is currently supported by <b>iOS only</b>. This button will figure out the current platform by itself and only shows up on supported devices!</p>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<form class="form-horizontal" id="set_button" role="form">
+			<h5>1. Preview of your beautiful new button</h5>
+			<p>&nbsp;</p>
+			<div class="browser">
+				<div class="head"><span></span><span></span><span></span></div>
+				<div class="content" id="button_preview">
+					<a class="wa_btn_s">Share</a>
+				</div>
+			</div>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<h5>2. Set your settings:</h5>
+			<p>&nbsp;</p>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Size</label>
+				<div class="col-sm-9" style="padding-top:5px;">
+					<div class="row">
+						<div class="col-sm-4">
+							<input type="radio" value="wa_btn_s" id="style_1" checked name="style"> <label for="style_1">small</label>
+						</div>
+						<div class="col-sm-4">
+							<input type="radio" value="wa_btn_m" id="style_2" name="style"> <label for="style_2">medium</label>
+						</div>
+						<div class="col-sm-4">
+							<input type="radio" value="wa_btn_l" id="style_3" name="style"> <label for="style_3">large</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+			    <label for="buttontext" class="col-sm-3 control-label">Button text</label>
+				<div class="col-sm-9">
+				    <input type="text" class="form-control" id="buttontext" value="Share">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="sharingtext" class="col-sm-3 control-label">Sharing text</label>
+				<div class="col-sm-9">
+				    <textarea class="form-control" rows="3" id="sharingtext" style="resize:none;">Take a look at this awesome website:</textarea>
+			    </div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3" style="padding-top:7px;">
+					<input type="radio" class="urlselect" name="url" id="url2" value="defined" checked>
+					Custom url:
+				</label>
+				<div class="col-sm-9">
+				    <input type="text" class="form-control" id="customurl" disabled readonly placeholder="http://">
+			    </div>
+			</div>	
+			<div class="form-group">
+				<label class="col-sm-12">
+					<input type="radio" class="urlselect" name="url" id="url1" value="current" checked>
+					Current page url
+				</label>
+			</div>
+		</form>					
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<h5>3. Get your code:</h5>
+		<p>&nbsp;</p>
+		<textarea class="form-control" rows="4" readonly id="code_button" onclick="this.select();" style="resize:none;font-size:12px;white-space:pre;"></textarea>														
+		<hr>
+		<p class="styles">
+			<small>This awesome service was handcrafted with love and passion by:<br /> <a href="http://keksbox.com" target="_blank">teamkbx</a> & <a href="http://zipline-media.de" target="_blank">kris siepert</a><br /><a href="http://www.youtube.com/watch?v=HSgZv3g-daw" target="_bank">We love sloths ♥</a></small>
+		</p>
+		<p class="styles"><img src="assets/img/teamkbx_logo.svg"></p>
+    </div>
+    <div id="fb-root"></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/generator.min.js"></script>
+    <script type="text/javascript">
+    //FB
+    (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=223940354473448";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	//Twitter
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		window.___gcfg = {lang: 'de'};
+	//GA
+    (function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-12530731-21","whatsapp-sharing.com");ga("send","pageview")</script>
+  </body>
+</html> 
+   
