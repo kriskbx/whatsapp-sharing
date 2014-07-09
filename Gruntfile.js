@@ -40,6 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.registerTask('default', ['clean', 'copy', 'cssmin', 'uglify']);
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };
