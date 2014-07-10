@@ -8,6 +8,13 @@ module.exports = function(grunt) {
 	    	src: ['build']
     	}
     },
+    "update_submodules": {
+        default: {
+            options: {
+            	params: "--force"
+            }
+        }
+    },
 	copy: {
 		html: {
 			src: 'src/index.html', dest: 'dist/index.html'
@@ -53,12 +60,13 @@ module.exports = function(grunt) {
 		src: ['**/*']
 	}
   });
+  grunt.loadNpmTasks('grunt-update-submodules');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.registerTask('default', ['clean:all', 'copy', 'dataUri', 'cssmin', 'uglify', 'clean:build']);
+  grunt.registerTask('default', ['clean:all', 'update_submodules', 'copy', 'dataUri', 'cssmin', 'uglify', 'clean:build']);
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };

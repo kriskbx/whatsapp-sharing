@@ -28,6 +28,7 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-uglify": "0.5.0",
     "grunt-data-uri": "~0.1.1",
-    "grunt-gh-pages": "~0.6.0"
+    "grunt-gh-pages": "~0.6.0",
+    "grunt-update-submodules": "~0.4.1"
   }
 }
