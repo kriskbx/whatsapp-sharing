@@ -19,6 +19,9 @@ body,html {
     border-radius: 2px;
     background-color: #5cbe4a;    
     background-repeat: no-repeat;
+    line-height: 1.2;
+	text-decoration: none;
+	text-align: left;
 }
 
 .wa_btn_s {
