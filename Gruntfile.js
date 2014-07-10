@@ -19,6 +19,9 @@ module.exports = function(grunt) {
 		html: {
 			src: 'src/index.html', dest: 'dist/index.html'
 		},
+		cname: {
+			src: 'cname/CNAME', dest: 'dist/CNAME'	
+		},
 		images: {
 			cwd: 'src/', expand: true, src: 'assets/img/**', dest: 'dist/'
 		},
