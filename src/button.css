@@ -8,7 +8,7 @@ body,html {
 .wa_btn {
 	background-image: url('button.svg');
 	border: 1px solid rgba(0, 0, 0, 0.1);
-    display: inline !important;
+    display: inline-block !important;
     position: relative;
     font-family: Arial,sans-serif;
     letter-spacing: .4px;
@@ -23,7 +23,6 @@ body,html {
 }
 
 .wa_btn_s {
-    top: 4px;
     font-size: 12px;
     background-size: 16px;
     background-position: 5px 2px;
