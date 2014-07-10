@@ -7,15 +7,12 @@ module.exports = function(grunt) {
 		},
 		images: {
 			cwd: 'src/', expand: true, src: 'assets/img/**', dest: 'dist/'
-		},
-		boostrap: {
-			cwd: 'node_modules/bootstrap/dist/', expand: true, src: 'fonts/**', dest: 'dist/assets/'
 		}
 	},
 	cssmin: {
 		combine: {
 			files: {
-				'dist/assets/css/style.min.css': ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'src/assets/css/style.css']
+				'dist/assets/css/style.min.css': ['src/assets/css/style.css']
 			}
 		}
 	},

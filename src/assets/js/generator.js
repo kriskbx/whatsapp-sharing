@@ -19,7 +19,7 @@ $(document).ready(function() {
 	function setCode() {
 		var customurl = '';			
 		if( $('#url2').prop('checked') ) { customurl = $('#customurl').val(); }
-		var text = '<a href="whatsapp://send" data-text="'+$('#sharingtext').val().replace(new RegExp('"', 'g'),"")+'" data-href="'+customurl.replace(new RegExp('"', 'g'),"")+'" class="wa_btn '+$('input[name=style]:checked').val()+'" style="display:none">'+$('#buttontext').val().replace(new RegExp('"', 'g'),"")+'</a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//<?= $_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; ?>button";h.appendChild(s);}</sc'+'ript>';
+		var text = '<a href="whatsapp://send" data-text="'+$('#sharingtext').val().replace(new RegExp('"', 'g'),"")+'" data-href="'+customurl.replace(new RegExp('"', 'g'),"")+'" class="wa_btn '+$('input[name=style]:checked').val()+'" style="display:none">'+$('#buttontext').val().replace(new RegExp('"', 'g'),"")+'</a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</sc'+'ript>';
 		$('#code_button').text(text);
 		$('#button_preview').html('<a class="'+$('input[name=style]:checked').val()+'">'+$('#buttontext').val().replace(new RegExp('"', 'g'),"")+'</a>');
 	}

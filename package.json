@@ -20,9 +20,6 @@
     "url": "https://github.com/kriskbx/whatsapp-sharing/issues"
   },
   "homepage": "http://whatsapp-sharing.com",
-  "dependencies": {
-    "bootstrap": "3.2.x"
-  },
   "devDependencies": {
   	"grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.4.1",
