@@ -3,10 +3,13 @@ module.exports = function(grunt) {
     clean: ['dist'],
 	copy: {
 		html: {
-			cwd: 'src/', expand: true, src: 'index.html', dest: 'dist/'
+			src: 'src/index.html', dest: 'dist/index.html'
 		},
 		images: {
 			cwd: 'src/', expand: true, src: 'assets/img/**', dest: 'dist/'
+		},
+		button: {
+			src: 'src/button/dist/button', dest: 'dist/button'
 		}
 	},
 	cssmin: {
