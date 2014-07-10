@@ -105,12 +105,14 @@ waShBtn.prototype.crBtn = function() {
         iframe[i].height = 1;
         iframe[i].button = b[i];  
         iframe[i].style.border = 0;
+        iframe[i].style.overflow = "hidden";
         iframe[i].border = 0;
+        iframe[i].setAttribute("scrolling", "no");
 	    iframe[i].addEventListener('load', function() {
 	    	 this.contentDocument.body.appendChild( this.button );
 	    	 this.contentDocument.getElementsByTagName('head')[0].appendChild( theWaShBtn.addStyling() );
-	    	 this.width = this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width;
-	    	 this.height = this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height;
+	    	 this.width = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width );
+	    	 this.height = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height );
 	    }, false);
 	    parent.insertBefore( iframe[i] , b[i] );
     }
