@@ -114,3 +114,12 @@ h5 {
 .wa_btn_real.wa_btn {
 	display: none !important;
 }
+
+.twitter-hr {
+	margin: 4em 0;
+}
+
+.twitter-timeline {
+	width: 100% !important;
+	margin-top: 2em;
+}
