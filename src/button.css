@@ -7,13 +7,9 @@ body,html {
 
 .wa_btn {
 	background-image: url('button.svg');
-}
-
-.wa_btn_s {
-    position: relative;
-    top: 3px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
     display: inline !important;
-    font-size: 12px;
+    position: relative;
     font-family: Arial,sans-serif;
     letter-spacing: .4px;
     cursor: pointer;
@@ -24,42 +20,25 @@ body,html {
     border-radius: 2px;
     background-color: #5cbe4a;    
     background-repeat: no-repeat;
+}
+
+.wa_btn_s {
+    top: 4px;
+    font-size: 12px;
     background-size: 16px;
     background-position: 5px 2px;
     padding: 3px 6px 3px 25px;
 }
 
 .wa_btn_m {
-    display: inline !important;
     font-size: 16px;
-    font-family: Arial,sans-serif;
-    letter-spacing: .4px;
-    cursor: pointer;
-    font-weight: 400;
-    text-transform: none;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    background-color: #5cbe4a;
-    background-repeat: no-repeat;
     background-size: 20px;
     background-position: 4px 2px;
     padding: 4px 6px 4px 30px;
 }
 
 .wa_btn_l {
-    display: inline !important;
     font-size: 16px;
-    font-family: Arial,sans-serif;
-    letter-spacing: .4px;
-    cursor: pointer;
-    font-weight: 400;
-    text-transform: none;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    background-color: #5cbe4a;
-    background-repeat: no-repeat;
     background-size: 20px;
     background-position: 5px 5px;
     padding: 8px 6px 8px 30px;
