@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    clean: ['dist'],
+    clean: {
+    	all: {
+    		src: ['dist', 'build']
+    	},
+    	build: {
+	    	src: ['build']
+    	}
+    },
 	copy: {
 		html: {
 			src: 'src/index.html', dest: 'dist/index.html'
@@ -11,11 +18,21 @@ module.exports = function(grunt) {
 		button: {
 			src: 'src/button/dist/button', dest: 'dist/button'
 		}
+	},	
+	dataUri: {
+		dist: {
+			src: ['src/button/src/*.css'],
+			dest: 'build/',
+			options: {
+				target: ['**'],
+				fixDirLevel: true
+			},
+		},
 	},
 	cssmin: {
 		combine: {
 			files: {
-				'dist/assets/css/style.min.css': ['src/assets/css/style.css']
+				'dist/assets/css/style.min.css': ['src/assets/css/style.css', 'build/button.css']
 			}
 		}
 	},
@@ -40,7 +57,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.registerTask('default', ['clean', 'copy', 'cssmin', 'uglify']);
+  grunt.registerTask('default', ['clean:all', 'copy', 'dataUri', 'cssmin', 'uglify', 'clean:build']);
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };

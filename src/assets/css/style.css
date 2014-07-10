@@ -6,6 +6,11 @@
 	Logo chain symbol SVG: Diego Naive | http://thenounproject.com/diegonaive/
 */
 
+body, html {
+	height: auto !important;
+	width: auto !important;
+}
+
 body {
 	/* background-image: url('../img/whatsapp-background.png'); */
 	background-color: #5cbe4a;
@@ -104,61 +109,4 @@ h5 {
 	background: url('../img/bg.jpg');
 	text-align: center;
 	padding: 30px 0;
-}
-
-.wa_btn_s {
-	display:inline;
-	font-size: 12px;
-	font-family:Arial,sans-serif;
-	letter-spacing: 0.4px;
-	cursor:pointer;
-	font-weight: normal;
-	text-transform: none;
-	color: #ffffff;
-	border:none;
-	border-radius: 2px;
-	background-color: #5cbe4a;
-	background-image: url("data:image/svg+xml,<svg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'><path fill='#FFFFFF' d='M16.257,1.759c-7.661,0-13.873,6.211-13.873,13.874c0,2.621,0.728,5.071,1.991,7.165l-2.503,7.444 l7.682-2.46c1.986,1.098,4.271,1.723,6.703,1.723c7.661,0,13.87-6.206,13.87-13.869C30.127,7.972,23.918,1.759,16.257,1.759z'/><path fill='#3C8A38' d='M24.171,19.462c-0.429-0.231-2.514-1.355-2.904-1.517c-0.394-0.156-0.68-0.24-0.982,0.181 c-0.303,0.419-1.169,1.365-1.434,1.646c-0.26,0.276-0.515,0.305-0.939,0.07c-0.425-0.236-1.8-0.743-3.397-2.277 c-1.242-1.193-2.056-2.641-2.292-3.085c-0.233-0.444,0-0.668,0.225-0.873c0.201-0.188,0.451-0.49,0.678-0.734 c0.224-0.247,0.306-0.421,0.461-0.705c0.153-0.283,0.094-0.537-0.008-0.759c-0.103-0.219-0.888-2.381-1.215-3.258 c-0.328-0.877-0.693-0.75-0.947-0.759c-0.251-0.007-0.54-0.057-0.829-0.063c-0.287-0.012-0.758,0.075-1.169,0.496 c-0.412,0.418-1.571,1.419-1.65,3.546c-0.078,2.126,1.394,4.244,1.598,4.538c0.208,0.299,2.81,4.907,7.141,6.809 c4.329,1.896,4.353,1.313,5.146,1.274c0.795-0.042,2.6-0.95,2.993-1.943c0.401-0.997,0.435-1.86,0.334-2.047 C24.877,19.814,24.594,19.698,24.171,19.462z'/></svg>");
-	background-repeat:  no-repeat;
-	background-size: 16px;
-	background-position: 5px 2px;
-	padding: 3px 6px 3px 25px;
-}
-
-.wa_btn_m {
-	display: inline;
-	font-size: 16px;
-	font-family:Arial,sans-serif;
-	letter-spacing: 0.4px;
-	cursor:pointer;
-	font-weight: normal;
-	text-transform: none;
-	color: #ffffff;
-	border:none;
-	border-radius: 2px;
-	background-color: #5cbe4a;
-	background-image: url("data:image/svg+xml,<svg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'><path fill='#FFFFFF' d='M16.257,1.759c-7.661,0-13.873,6.211-13.873,13.874c0,2.621,0.728,5.071,1.991,7.165l-2.503,7.444 l7.682-2.46c1.986,1.098,4.271,1.723,6.703,1.723c7.661,0,13.87-6.206,13.87-13.869C30.127,7.972,23.918,1.759,16.257,1.759z'/><path fill='#3C8A38' d='M24.171,19.462c-0.429-0.231-2.514-1.355-2.904-1.517c-0.394-0.156-0.68-0.24-0.982,0.181 c-0.303,0.419-1.169,1.365-1.434,1.646c-0.26,0.276-0.515,0.305-0.939,0.07c-0.425-0.236-1.8-0.743-3.397-2.277 c-1.242-1.193-2.056-2.641-2.292-3.085c-0.233-0.444,0-0.668,0.225-0.873c0.201-0.188,0.451-0.49,0.678-0.734 c0.224-0.247,0.306-0.421,0.461-0.705c0.153-0.283,0.094-0.537-0.008-0.759c-0.103-0.219-0.888-2.381-1.215-3.258 c-0.328-0.877-0.693-0.75-0.947-0.759c-0.251-0.007-0.54-0.057-0.829-0.063c-0.287-0.012-0.758,0.075-1.169,0.496 c-0.412,0.418-1.571,1.419-1.65,3.546c-0.078,2.126,1.394,4.244,1.598,4.538c0.208,0.299,2.81,4.907,7.141,6.809 c4.329,1.896,4.353,1.313,5.146,1.274c0.795-0.042,2.6-0.95,2.993-1.943c0.401-0.997,0.435-1.86,0.334-2.047 C24.877,19.814,24.594,19.698,24.171,19.462z'/></svg>");
-	background-repeat:  no-repeat;
-	background-size: 20px;
-	background-position: 4px 2px;
-	padding: 4px 6px 4px 30px;
-}
-
-.wa_btn_l {
-	display: inline;
-	font-size: 16px;
-	font-family:Arial,sans-serif;
-	letter-spacing: 0.4px;
-	cursor:pointer;
-	font-weight: normal;
-	text-transform: none;
-	color: #ffffff;
-	border:none;
-	border-radius: 2px;
-	background-color: #5cbe4a;
-	background-image: url("data:image/svg+xml,<svg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'><path fill='#FFFFFF' d='M16.257,1.759c-7.661,0-13.873,6.211-13.873,13.874c0,2.621,0.728,5.071,1.991,7.165l-2.503,7.444 l7.682-2.46c1.986,1.098,4.271,1.723,6.703,1.723c7.661,0,13.87-6.206,13.87-13.869C30.127,7.972,23.918,1.759,16.257,1.759z'/><path fill='#3C8A38' d='M24.171,19.462c-0.429-0.231-2.514-1.355-2.904-1.517c-0.394-0.156-0.68-0.24-0.982,0.181 c-0.303,0.419-1.169,1.365-1.434,1.646c-0.26,0.276-0.515,0.305-0.939,0.07c-0.425-0.236-1.8-0.743-3.397-2.277 c-1.242-1.193-2.056-2.641-2.292-3.085c-0.233-0.444,0-0.668,0.225-0.873c0.201-0.188,0.451-0.49,0.678-0.734 c0.224-0.247,0.306-0.421,0.461-0.705c0.153-0.283,0.094-0.537-0.008-0.759c-0.103-0.219-0.888-2.381-1.215-3.258 c-0.328-0.877-0.693-0.75-0.947-0.759c-0.251-0.007-0.54-0.057-0.829-0.063c-0.287-0.012-0.758,0.075-1.169,0.496 c-0.412,0.418-1.571,1.419-1.65,3.546c-0.078,2.126,1.394,4.244,1.598,4.538c0.208,0.299,2.81,4.907,7.141,6.809 c4.329,1.896,4.353,1.313,5.146,1.274c0.795-0.042,2.6-0.95,2.993-1.943c0.401-0.997,0.435-1.86,0.334-2.047 C24.877,19.814,24.594,19.698,24.171,19.462z'/></svg>");
-	background-repeat:  no-repeat;
-	background-size: 20px;
-	background-position: 5px 5px;
-	padding: 8px 6px 8px 30px;
 }
