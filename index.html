@@ -33,16 +33,20 @@
 		<h1 class="logo"><img src="assets/img/logo_green.svg"><br />WhatsApp Sharing Button Generator</h1>
 		<p>&nbsp;</p>
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="fb-like" data-href="http://whatsapp-sharing.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" style="bottom:8px;"></div>				
 			</div>
-			<div class="col-sm-4">				
+			<div class="col-sm-3">				
 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://whatsapp-sharing.com">Tweet</a>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="150"></div>
 			</div>
-			<div class="col-sm-4 visible-xs">
+			<div class="col-sm-3">
+				<iframe src="http://ghbtns.com/github-btn.html?user=kriskbx&repo=whatsapp-sharing&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+			</div>
+			<div class="col-sm-3 visible-xs">
 				<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
 			</div>
 		</div>
@@ -136,9 +140,16 @@
 	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 		window.___gcfg = {lang: 'de'};
 	//G+
-	window.___gcfg={lang:"de"};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://apis.google.com/js/platform.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+	(function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
 	//GA
-    (function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-12530731-21","whatsapp-sharing.com");ga("send","pageview")</script>
+    (function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-12530731-21","whatsapp-sharing.com");ga("send","pageview")
+    //WAS
+    if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="button";h.appendChild(s);}
+    </script>
   </body>
 </html> 
    
