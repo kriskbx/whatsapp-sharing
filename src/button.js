@@ -111,6 +111,11 @@ waShBtn.prototype.crBtn = function() {
 	    iframe[i].addEventListener('load', function() {
 	    	 this.contentDocument.body.appendChild( this.button );
 	    	 this.contentDocument.getElementsByTagName('head')[0].appendChild( theWaShBtn.addStyling() );
+	    	 
+	    	 var meta = document.createElement('meta');
+	    	 meta.setAttribute('charset', 'utf-8');
+	    	 this.contentDocument.getElementsByTagName('head')[0].appendChild( meta );
+	    	 
 	    	 this.width = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width );
 	    	 this.height = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height );
 	    }, false);
