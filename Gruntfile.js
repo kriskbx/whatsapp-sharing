@@ -8,13 +8,6 @@ module.exports = function(grunt) {
 	    	src: ['build']
     	}
     },
-    "update_submodules": {
-        default: {
-            options: {
-            	params: "--force"
-            }
-        }
-    },
 	copy: {
 		html: {
 			src: 'src/index.html', dest: 'dist/index.html'
@@ -26,9 +19,6 @@ module.exports = function(grunt) {
 			cwd: 'src/', expand: true, src: 'assets/img/**', dest: 'dist/'
 		},
 		button: {
-			src: 'src/button-replacement/button.js', dest: 'dist/button'
-		},
-		buttonreal: {
 			src: 'src/button/dist/whatsapp-button.js', dest: 'dist/assets/js/whatsapp-button.js'
 		}
 	},	
@@ -57,6 +47,11 @@ module.exports = function(grunt) {
 			files: {
 				'dist/assets/js/generator.min.js': ['src/assets/js/generator.js']
 			}
+		},
+		buttonreplacement: {
+			files: {
+				'dist/button': ['src/button-replacement/button.js']
+			}
 		}
 	 },
 	'gh-pages': {
@@ -73,6 +68,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.registerTask('default', ['clean:all', 'update_submodules', 'copy', 'dataUri', 'cssmin', 'uglify', 'clean:build']);
+  grunt.registerTask('default', ['clean:all', 'copy', 'dataUri', 'cssmin', 'uglify:dist', 'uglify:buttonreplacement', 'clean:build']);
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };
