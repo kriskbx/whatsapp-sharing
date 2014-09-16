@@ -26,7 +26,10 @@ module.exports = function(grunt) {
 			cwd: 'src/', expand: true, src: 'assets/img/**', dest: 'dist/'
 		},
 		button: {
-			src: 'src/button/dist/button', dest: 'dist/button'
+			src: 'src/button-replacement/button.js', dest: 'dist/button'
+		},
+		buttonreal: {
+			src: 'src/button/dist/whatsapp-button.js', dest: 'dist/assets/js/whatsapp-button.js'
 		}
 	},	
 	dataUri: {
