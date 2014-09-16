@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 		},
 		dist: {
 			files: {
-				'dist/button': ['build/button.js']
+				'dist/whatsapp-button.js': ['build/button.js']
 			}
 		}
 	},
