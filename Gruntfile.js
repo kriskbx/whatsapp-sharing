@@ -68,6 +68,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.registerTask('default', ['clean:all', 'copy', 'dataUri', 'cssmin', 'uglify:dist', 'uglify:buttonreplacement', 'clean:build']);
+  grunt.registerTask('default', ['clean:all', 'copy', 'dataUri', 'cssmin', 'uglify:dist', 'clean:build']);
   grunt.registerTask('deploy', ['default', 'gh-pages']);
 };
