@@ -1,12 +1,12 @@
 /**
  * WhatsApp Sharing Button
  * https://github.com/kriskbx/whatsapp-sharing/
- * 
+ *
  * Copyright (c) 2014 by Kris Siepert, John Brüggemann, Daniel Stopp
  * http://kris.cool - http://keksbox.com - http://odiumediae.de
  * Licensed under the MIT license.
  */
- 
+
 
 body,html {
     padding: 0;
@@ -18,7 +18,7 @@ body,html {
 .wa_btn {
 	background-image: url('button.svg');
 	border: 1px solid rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    display: inline-block !important;
     position: relative;
     font-family: Arial,sans-serif;
     letter-spacing: .4px;
@@ -27,7 +27,7 @@ body,html {
     text-transform: none;
     color: #fff;
     border-radius: 2px;
-    background-color: #5cbe4a;    
+    background-color: #5cbe4a;
     background-repeat: no-repeat;
     line-height: 1.2;
 	text-decoration: none;
