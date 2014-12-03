@@ -1,7 +1,7 @@
 /**
  * WhatsApp Sharing Button
  * https://github.com/kriskbx/whatsapp-sharing/
- * 
+ *
  * Copyright (c) 2014 by Kris Siepert, John Brüggemann, Daniel Stopp
  * http://kris.cool - http://keksbox.com - http://odiumediae.de
  * Licensed under the MIT license.
@@ -42,7 +42,7 @@ waShBtn.prototype.cntLdd = function( win, fn ) {
 	        try { root.doScroll("left"); } catch (e) { setTimeout(poll, 50); return; }
 	        init("poll");
 	    };
-	    
+
     if (doc.readyState == "complete") {
     	fn.call(win, "lazy");
 	} else {
@@ -65,7 +65,7 @@ waShBtn.prototype.addStyling = function() {
 	var s = document.createElement("style"),
 		// CSS Styling
 		c = "[[minified_css]]";
-    
+
     s.type = "text/css";
     if (s.styleSheet) {
     	s.styleSheet.cssText = c;
@@ -78,13 +78,13 @@ waShBtn.prototype.addStyling = function() {
 /**
  * Create the button element
  */
-waShBtn.prototype.crBtn = function() {	
+waShBtn.prototype.crBtn = function() {
 
-	var b = document.getElementsByClassName("wa_btn");
+	var b = [].slice.call( document.querySelectorAll(".wa_btn") );
 	iframe = new Array();
-	
+
 	for (var i = 0; i < b.length; i++) {
-		
+
 		var parent = b[i].parentNode;
         var t = b[i].getAttribute("data-text");
         var u = b[i].getAttribute("data-href");
@@ -97,13 +97,13 @@ waShBtn.prototype.crBtn = function() {
             at += u;
         } else {
             at += document.URL;
-        }        
+        }
         b[i].setAttribute("href", o + at);
         b[i].setAttribute("target", "_top");
-        iframe[i] = document.createElement('iframe');    
+        iframe[i] = document.createElement('iframe');
         iframe[i].width = 1;
         iframe[i].height = 1;
-        iframe[i].button = b[i];  
+        iframe[i].button = b[i];
         iframe[i].style.border = 0;
         iframe[i].style.overflow = "hidden";
         iframe[i].border = 0;
@@ -111,11 +111,11 @@ waShBtn.prototype.crBtn = function() {
 	    iframe[i].addEventListener('load', function() {
 	    	 this.contentDocument.body.appendChild( this.button );
 	    	 this.contentDocument.getElementsByTagName('head')[0].appendChild( theWaShBtn.addStyling() );
-	    	 
+
 	    	 var meta = document.createElement('meta');
 	    	 meta.setAttribute('charset', 'utf-8');
 	    	 this.contentDocument.getElementsByTagName('head')[0].appendChild( meta );
-	    	 
+
 	    	 this.width = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width );
 	    	 this.height = Math.ceil( this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height );
 	    }, false);
