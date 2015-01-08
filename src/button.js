@@ -89,14 +89,14 @@ waShBtn.prototype.crBtn = function() {
         var t = b[i].getAttribute("data-text");
         var u = b[i].getAttribute("data-href");
         var o = b[i].getAttribute("href");
-        var at = "?text=" + t;
+        var at = "?text=" + encodeURIComponent( t );
         if (t) {
-            at += " ";
+            at += "%20";
         }
         if (u) {
-            at += u;
+            at += encodeURIComponent( u );
         } else {
-            at += document.URL;
+            at += encodeURIComponent( document.URL );
         }
         b[i].setAttribute("href", o + at);
         b[i].setAttribute("target", "_top");
