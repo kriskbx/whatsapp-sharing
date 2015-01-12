@@ -22,6 +22,6 @@ If you want to customize the size, style, url or the sharing text, feel free to 
 
 ## FAQ
 
-### 1. I'm using AJAX
+### 1. I'm using AJAX?
 
-Run this `theWaShBtn.crBtn();` after you loaded your content.
+Run `theWaShBtn.crBtn();` after you loaded your content.
