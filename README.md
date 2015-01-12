@@ -19,3 +19,9 @@ Place this code somewhere on your website to display the button:
 	<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
 	
 If you want to customize the size, style, url or the sharing text, feel free to visit [whatsapp-sharing.com](http://www.whatsapp-sharing.com) for a code generator.
+
+## FAQ
+
+### 1. I'm using AJAX
+
+Run this `theWaShBtn.crBtn();` after you loaded your content.
