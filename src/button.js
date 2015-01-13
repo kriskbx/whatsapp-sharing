@@ -20,7 +20,7 @@ waShBtn = function() {
 /**
  * Check for iOS
  */
-waShBtn.prototype.isIos = navigator.userAgent.match(/Android|iPhone/i) && !navigator.userAgent.match(/iPod|iPad/i);
+waShBtn.prototype.isIos = /(iPhone|Android)/.test(navigator.userAgent);
 
 /**
  * Call a function when the content is loaded and the document is ready
