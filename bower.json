@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-sharing",
+  "version": "1.2.3",
+  "homepage": "https://github.com/kriskbx/whatsapp-sharing",
+  "authors": [
+    "kriskbx"
+  ],
+  "main": "whatsapp sharing button generator",
+  "keywords": [
+    "whatsapp",
+    "sharing",
+    "button"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

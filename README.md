@@ -4,7 +4,11 @@
 
 ### 1. Download
 
-Download the current [release](https://github.com/kriskbx/whatsapp-sharing/releases) or clone the repo and upload `dist/whatsapp-button.js` somewhere on your webserver.
+* With Bower: `bower install whatsapp-sharing`
+* With Git: `git clone https://github.com/kriskbx/whatsapp-sharing.git`
+* Manually: [https://github.com/kriskbx/whatsapp-sharing/releases](https://github.com/kriskbx/whatsapp-sharing/releases) 
+
+Or include the hosted version on [jsdelivr](http://www.jsdelivr.com/): `//cdn.jsdelivr.net/whatsapp-sharing/1.2.3/whatsapp-button.js`
 
 ### 2. Integrate the buttons source
 
