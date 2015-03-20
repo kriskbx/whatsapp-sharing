@@ -4,6 +4,7 @@
 
 ### 1. Download
 
+* With Npm: `npm install whatsapp-sharing`
 * With Bower: `bower install whatsapp-sharing`
 * With Git: `git clone https://github.com/kriskbx/whatsapp-sharing.git`
 * Manually: [https://github.com/kriskbx/whatsapp-sharing/releases](https://github.com/kriskbx/whatsapp-sharing/releases) 
