@@ -1,6 +1,6 @@
 # WhatsApp sharing button
 
-[![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Code Climate](https://img.shields.io/codeclimate/github/kriskbx/whatsapp-sharing.svg)](https://codeclimate.com/github/kriskbx/whatsapp-sharing) [![Release](https://img.shields.io/github/release/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing) [![GitHub license](https://img.shields.io/github/license/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing/blob/master/LICENSE) [![Npm](https://img.shields.io/npm/dm/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
+[![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Code Climate](https://img.shields.io/codeclimate/github/kriskbx/whatsapp-sharing.svg)](https://codeclimate.com/github/kriskbx/whatsapp-sharing) [![Release](https://img.shields.io/github/release/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing) [![GitHub license](https://img.shields.io/github/license/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing/blob/master/LICENSE) [![Npm](https://img.shields.io/npm/dm/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
 
 
 ## Installation
