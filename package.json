@@ -12,9 +12,12 @@
   },
   "keywords": [
     "whatsapp",
-    "sharing"
+    "sharing",
+    "button",
+    "whats",
+    "app"
   ],
-  "author": "teamkbx",
+  "author": "kriskbx",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kriskbx/whatsapp-sharing/issues"
