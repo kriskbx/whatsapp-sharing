@@ -7,15 +7,15 @@
  * Licensed under the MIT license.
  */
 
-;
 (function () {
 
+    "use strict";
     var root = this;
 
     /**
      * Constructor
      */
-    WASHAREBUTTON = function () {
+    var WASHAREBTN = function () {
         if (this.isIos === true) {
             this.cntLdd(window, this.crBtn);
         }
@@ -24,12 +24,12 @@
     /**
      * Check for iOS
      */
-    WASHAREBUTTON.prototype.isIos = ((navigator.userAgent.match(/Android|iPhone/i) && !navigator.userAgent.match(/iPod|iPad/i)) ? true : false);
+    WASHAREBTN.prototype.isIos = ((navigator.userAgent.match(/Android|iPhone/i) && !navigator.userAgent.match(/iPod|iPad/i)) ? true : false);
 
     /**
      * Call a function when the content is loaded and the document is ready
      */
-    WASHAREBUTTON.prototype.cntLdd = function (win, fn) {
+    WASHAREBTN.prototype.cntLdd = function (win, fn) {
         var done = false,
             top = true,
             doc = win.document,
@@ -41,7 +41,7 @@
                 if (e.type === "readystatechange" && doc.readyState !== "complete") {
                     return;
                 }
-                (e.type == "load" ? win : doc)[rem](pre + e.type, init, false);
+                (e.type === "load" ? win : doc)[rem](pre + e.type, init, false);
                 if (!done && (done = true)) {
                     fn.call(win, e.type || e);
                 }
@@ -77,9 +77,8 @@
     /**
      * Append styling
      */
-    WASHAREBUTTON.prototype.addStyling = function () {
+    WASHAREBTN.prototype.addStyling = function () {
         var s = document.createElement("style"),
-        // CSS Styling
             c = "[[minified_css]]";
 
         s.type = "text/css";
@@ -92,20 +91,36 @@
     };
 
     /**
+     *
+     */
+    WASHAREBTN.prototype.iFrameOnload = function () {
+        return function () {
+            this.contentDocument.body.appendChild(this.button);
+            this.contentDocument.getElementsByTagName('head')[0].appendChild(root.WASHAREBTN.addStyling());
+
+            var meta = document.createElement('meta');
+            meta.setAttribute('charset', 'utf-8');
+            this.contentDocument.getElementsByTagName('head')[0].appendChild(meta);
+
+            this.width = Math.ceil(this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width);
+            this.height = Math.ceil(this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height);
+        };
+    };
+
+    /**
      * Create the button element
      */
-    WASHAREBUTTON.prototype.crBtn = function () {
-
+    WASHAREBTN.prototype.crBtn = function () {
         var bn = document.querySelectorAll(".wa_btn");
         var b = [].slice.call(bn);
         var iframe = [];
 
         for (var i = 0; i < b.length; i++) {
-
             var parent = b[i].parentNode;
             var t = b[i].getAttribute("data-text");
             var u = b[i].getAttribute("data-href");
             var o = b[i].getAttribute("href");
+            var oc = b[i].getAttribute("onclick");
             var at = "?text=" + encodeURIComponent(t);
             if (t) {
                 at += "%20";
@@ -117,6 +132,7 @@
             }
             b[i].setAttribute("href", o + at);
             b[i].setAttribute("target", "_top");
+            b[i].setAttribute("onclick", "window.parent." + oc );
             iframe[i] = document.createElement('iframe');
             iframe[i].width = 1;
             iframe[i].height = 1;
@@ -125,17 +141,7 @@
             iframe[i].style.overflow = "hidden";
             iframe[i].border = 0;
             iframe[i].setAttribute("scrolling", "no");
-            iframe[i].addEventListener('load', function () {
-                this.contentDocument.body.appendChild(this.button);
-                this.contentDocument.getElementsByTagName('head')[0].appendChild(root.button.addStyling());
-
-                var meta = document.createElement('meta');
-                meta.setAttribute('charset', 'utf-8');
-                this.contentDocument.getElementsByTagName('head')[0].appendChild(meta);
-
-                this.width = Math.ceil(this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().width);
-                this.height = Math.ceil(this.contentDocument.getElementsByTagName('a')[0].getBoundingClientRect().height);
-            }, false);
+            iframe[i].addEventListener('load', root.WASHAREBTN.iFrameOnload());
             parent.insertBefore(iframe[i], b[i]);
         }
     };
@@ -143,6 +149,6 @@
     /**
      * Instance
      */
-    root.button = new WASHAREBUTTON();
+    root.WASHAREBTN = new WASHAREBTN();
 
 }).call(this);
