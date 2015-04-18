@@ -1,5 +1,7 @@
 # WhatsApp sharing button
 
+[![Code Climate](https://codeclimate.com/github/kriskbx/whatsapp-sharing/badges/gpa.svg)](https://codeclimate.com/github/kriskbx/whatsapp-sharing)
+
 ## Installation
 
 ### 1. Download
