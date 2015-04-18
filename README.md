@@ -1,6 +1,7 @@
 # WhatsApp sharing button
 
-[![Code Climate](https://codeclimate.com/github/kriskbx/whatsapp-sharing/badges/gpa.svg)](https://codeclimate.com/github/kriskbx/whatsapp-sharing)
+[![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Code Climate](https://img.shields.io/codeclimate/github/kriskbx/whatsapp-sharing.svg)](https://codeclimate.com/github/kriskbx/whatsapp-sharing) [![Release](https://img.shields.io/github/release/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing) [![GitHub license](https://img.shields.io/github/license/kriskbx/whatsapp-sharing.svg)](https://github.com/kriskbx/whatsapp-sharing/blob/master/LICENSE) [![Npm](https://img.shields.io/npm/dm/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
+
 
 ## Installation
 
@@ -31,7 +32,7 @@ If you want to customize the size, style, url or the sharing text, feel free to 
 
 ### 1. I'm using AJAX?
 
-Run `theWaShBtn.crBtn();` after you loaded your content.
+Run `WASHAREBTN.crBtn();` after you loaded your content.
 
 ### 2. I want to track clicks on the button
 
@@ -44,3 +45,8 @@ Nope, that's not possible (at the moment).
 ### 4. If WhatsApp is not installed on the device there's an error message
 
 It's not possible to check if WhatsApp is installed on the device. This is a good thing, imagine a webpage can access the list of installed applications.
+
+
+## License
+
+MIT
