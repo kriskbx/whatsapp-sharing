@@ -17,7 +17,12 @@ body {
 	color: #e2ffd9;
 	font-size: 200%;
 	line-height: 150%;
-} 
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 a {
 	text-transform: uppercase;
@@ -53,7 +58,7 @@ a:hover {
 .logo {
 	padding-left:80px;
 	}
-	
+
 .logo img {
 	float:left;
 	margin-left:-80px;
@@ -64,7 +69,7 @@ a:hover {
 h5 {
 	text-transform: uppercase;
 }
-	
+
 .important {
 	margin-top: 5%;
 	padding:20px;
@@ -73,15 +78,15 @@ h5 {
 	line-height:1.6;
 	font-style: italic;
 	}
-	
+
 	.important b {
 		color: #ffffff;
 	}
-	
+
 .styles {
 	text-align:center;
 	}
-	
+
 .browser .head span {
 	display: inline-block;
 	width: 10px;
@@ -104,7 +109,7 @@ h5 {
 	height: 21px;
 	padding-left: 10px;
 }
-	
+
 .browser .content {
 	background: url('../img/bg.jpg');
 	text-align: center;
