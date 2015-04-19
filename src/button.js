@@ -2,7 +2,7 @@
  * WhatsApp Sharing Button
  * https://github.com/kriskbx/whatsapp-sharing/
  *
- * Copyright (c) 2015 by Kris Siepert
+ * Copyright (c) 2015 by kriskbx
  *
  * Licensed under the MIT license.
  */
@@ -13,7 +13,9 @@
     var root = this;
 
     /**
-     * Constructor
+     * Constructor.
+     *
+     * @constructor
      */
     var WASHAREBTN = function () {
         if (this.isIos === true) {
@@ -22,12 +24,17 @@
     };
 
     /**
-     * Check for iOS
+     * Is iOS / Android?
+     *
+     * @type {boolean}
      */
     WASHAREBTN.prototype.isIos = ((navigator.userAgent.match(/Android|iPhone/i) && !navigator.userAgent.match(/iPod|iPad/i)) ? true : false);
 
     /**
-     * Call a function when the content is loaded and the document is ready
+     * Call a function when the content is loaded and the document is ready.
+     *
+     * @param win
+     * @param fn
      */
     WASHAREBTN.prototype.cntLdd = function (win, fn) {
         var done = false,
@@ -75,7 +82,9 @@
     };
 
     /**
-     * Append styling
+     * Returns CSS style element.
+     *
+     * @returns {HTMLElement}
      */
     WASHAREBTN.prototype.addStyling = function () {
         var s = document.createElement("style"),
@@ -91,7 +100,54 @@
     };
 
     /**
+     * Set attributes on the given button element and returns it.
      *
+     * @param b
+     * @returns {*}
+     */
+    WASHAREBTN.prototype.setButtonAttributes = function (b) {
+        var url = b.getAttribute("data-href");
+        var text = "?text=" + encodeURIComponent(b.getAttribute("data-text")) + (b.getAttribute("data-text") ? "%20" : "");
+
+        if (url) {
+            text += encodeURIComponent(url);
+        } else {
+            text += encodeURIComponent(document.URL);
+        }
+
+        b.setAttribute("target", "_top");
+        b.setAttribute("href", b.getAttribute("href") + text);
+        b.setAttribute("onclick", "window.parent." + b.getAttribute("onclick"));
+
+        return b;
+    };
+
+    /**
+     * Accepts a button and creates an iframe element around it.
+     * Adds an EventListener to append the button after the iframe was inserted in the DOM.
+     *
+     * @param b
+     * @returns {HTMLElement}
+     */
+    WASHAREBTN.prototype.setIframeAttributes = function (b) {
+        var i = document.createElement('iframe');
+
+        i.width = 1;
+        i.height = 1;
+        i.button = b;
+        i.style.border = 0;
+        i.style.overflow = "hidden";
+        i.border = 0;
+
+        i.setAttribute("scrolling", "no");
+        i.addEventListener('load', root.WASHAREBTN.iFrameOnload());
+
+        return i;
+    };
+
+    /**
+     * This function is toggled after the iframe was successfully inserted in the DOM.
+     * The button element as well as the style element are appended to the iframe.
      */
     WASHAREBTN.prototype.iFrameOnload = function () {
         return function () {
@@ -108,41 +164,17 @@
     };
 
     /**
-     * Create the button element
+     * Create WASHAREBTNS from all elements with the className wa_btn.
      */
     WASHAREBTN.prototype.crBtn = function () {
-        var bn = document.querySelectorAll(".wa_btn");
-        var b = [].slice.call(bn);
-        var iframe = [];
+        var b = [].slice.call(document.querySelectorAll(".wa_btn"));
+        var iframes = [];
 
         for (var i = 0; i < b.length; i++) {
-            var parent = b[i].parentNode;
-            var t = b[i].getAttribute("data-text");
-            var u = b[i].getAttribute("data-href");
-            var o = b[i].getAttribute("href");
-            var oc = b[i].getAttribute("onclick");
-            var at = "?text=" + encodeURIComponent(t);
-            if (t) {
-                at += "%20";
-            }
-            if (u) {
-                at += encodeURIComponent(u);
-            } else {
-                at += encodeURIComponent(document.URL);
-            }
-            b[i].setAttribute("href", o + at);
-            b[i].setAttribute("target", "_top");
-            b[i].setAttribute("onclick", "window.parent." + oc );
-            iframe[i] = document.createElement('iframe');
-            iframe[i].width = 1;
-            iframe[i].height = 1;
-            iframe[i].button = b[i];
-            iframe[i].style.border = 0;
-            iframe[i].style.overflow = "hidden";
-            iframe[i].border = 0;
-            iframe[i].setAttribute("scrolling", "no");
-            iframe[i].addEventListener('load', root.WASHAREBTN.iFrameOnload());
-            parent.insertBefore(iframe[i], b[i]);
+            b[i] = root.WASHAREBTN.setButtonAttributes(b[i]);
+            iframes[i] = root.WASHAREBTN.setIframeAttributes(b[i]);
+
+            b[i].parentNode.insertBefore(iframes[i], b[i]);
         }
     };
 
