@@ -18,6 +18,8 @@
      * @constructor
      */
     var WASHAREBTN = function () {
+        this.buttons = [];
+
         if (this.isIos === true) {
             this.cntLdd(window, this.crBtn);
         }
@@ -171,6 +173,8 @@
         var iframes = [];
 
         for (var i = 0; i < b.length; i++) {
+            root.WASHAREBTN.buttons.push(b[i]);
+
             b[i] = root.WASHAREBTN.setButtonAttributes(b[i]);
             iframes[i] = root.WASHAREBTN.setIframeAttributes(b[i]);
 
