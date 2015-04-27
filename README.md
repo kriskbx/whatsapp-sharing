@@ -12,7 +12,7 @@
 * With Git: `git clone https://github.com/kriskbx/whatsapp-sharing.git`
 * Manually: [https://github.com/kriskbx/whatsapp-sharing/releases](https://github.com/kriskbx/whatsapp-sharing/releases) 
 
-Or include the hosted version on [jsdelivr](http://www.jsdelivr.com/): `//cdn.jsdelivr.net/whatsapp-sharing/1.3.1/whatsapp-button.js`
+Or include the hosted version on [jsdelivr](http://www.jsdelivr.com/): `//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js`
 
 ### 2. Integrate the buttons source
 
@@ -34,7 +34,7 @@ If you want to customize the size, style, url or the sharing text, feel free to 
 
 Run `WASHAREBTN.crBtn();` after you loaded your content.
 
-### 2. I want to track clicks on the button
+### 2. I want to track clicks on the button.
 
 You can simply use JavaScript event handlers like `onClick` in the code of step 3.
 
@@ -42,10 +42,18 @@ You can simply use JavaScript event handlers like `onClick` in the code of step 
 
 Nope, that's not possible (at the moment).
 
-### 4. If WhatsApp is not installed on the device there's an error message
+### 4. If WhatsApp is not installed on the device there's an error message.
 
-It's not possible to check if WhatsApp is installed on the device. This is a good thing, imagine a webpage can access the list of installed applications.
+It's not possible to check if WhatsApp is installed on the device. This is a good thing, imagine a webpage can access the list of installed applications. And for the record: why should someone try to share something via WhatsApp if he or she is not using WhatsApp at all?
 
+### 5. I get "Sharing failed" all the time.
+
+The main reason for this error are modifications of the original button code that prevent the library from selecting the buttons. As a result text and url won't be added and the url-scheme that stays empty. Repeat the installation steps and don't change the code on your own.
+You can test that by switching your Browsers useragent to "Android" or "iPhone" and running `WASHAREBTN.buttons` in your JavaScript console after that. This should list all the selected buttons on the page.
+
+### 6. But I want my own styling and icons.
+
+Well, this library was not made to be heavily modified. It was made to provide an easy way for non-devs to insert a button like this into their websites. If you want your own styling feel free to fork the repo, research the code and build your own button upon it. After all it's only a useragent check and an url-scheme.
 
 ## License
 
