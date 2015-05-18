@@ -12,7 +12,7 @@
 * With Git: `git clone https://github.com/kriskbx/whatsapp-sharing.git`
 * Manually: [https://github.com/kriskbx/whatsapp-sharing/releases](https://github.com/kriskbx/whatsapp-sharing/releases) 
 
-Or include the hosted version on [jsdelivr](http://www.jsdelivr.com/): `//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js`
+Or include the hosted version on [jsdelivr](http://www.jsdelivr.com/): `//cdn.jsdelivr.net/whatsapp-sharing/1.3.3/whatsapp-button.js`
 
 ### 2. Integrate the buttons source
 
