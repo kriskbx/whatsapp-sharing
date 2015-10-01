@@ -1,4 +1,4 @@
-# WhatsApp sharing button [![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Npm](https://img.shields.io/npm/dt/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
+# WA sharing button [![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Npm](https://img.shields.io/npm/dt/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
 
 
 ## Installation
