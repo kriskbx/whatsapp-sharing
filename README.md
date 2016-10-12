@@ -1,6 +1,9 @@
 # WA sharing button [![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Npm](https://img.shields.io/npm/dt/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
 
 
+> This project is **no longer maintained.** After WhatsApp Inc. threatened me with legal sanctions to drop the domain name and website due to their trademark, I lost all motivation to work on this project or support it anymore. Feel free to fork it and do with it what you want. Sidenote: **the library still works.**
+
+
 ## Installation
 
 ### 1. Download
@@ -24,7 +27,7 @@ Place this code somewhere on your website to display the button:
 
 	<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
 	
-If you want to customize the size, style, url or the sharing text, feel free to visit [whatsapp-sharing.com](http://www.whatsapp-sharing.com) for a code generator.
+If you want to customize the size, style, url or the sharing text, feel free to visit [whatsapp-sharing.com](http://kriskbx.github.io/whatsapp-sharing) for a code generator.
 
 ## FAQ
 
