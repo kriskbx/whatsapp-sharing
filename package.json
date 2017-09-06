@@ -2,7 +2,7 @@
   "name": "whatsapp-sharing",
   "version": "1.3.3",
   "description": "WhatsApp Sharing Button",
-  "main": "-",
+  "main": "dist/whatsapp-button.js",
   "scripts": {
     "test": "grunt jshint:button"
   },
