@@ -1,4 +1,4 @@
-# WA sharing button [![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Npm](https://img.shields.io/npm/dt/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing)
+# WA sharing button [![Tips](https://img.shields.io/gratipay/kriskbx.svg)](https://www.gittip.com/kriskbx/) [![Travis](https://img.shields.io/travis/kriskbx/whatsapp-sharing.svg)](https://travis-ci.org/kriskbx/whatsapp-sharing) [![Npm](https://img.shields.io/npm/dt/whatsapp-sharing.svg)](https://www.npmjs.com/package/whatsapp-sharing) [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/whatsapp-sharing/badge?style=rounded)](https://www.jsdelivr.com/package/npm/whatsapp-sharing)
 
 
 > This project is **no longer maintained.** After WhatsApp Inc. threatened me with legal sanctions to drop the domain name and website due to their trademark, I lost all motivation to work on this project or support it anymore. Feel free to fork it and do with it what you want. Sidenote: **the library still works.**
